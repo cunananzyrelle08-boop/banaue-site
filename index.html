@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Banaue — Rice Terraces</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;1,500&family=Work+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<input type="checkbox" id="themeToggle" class="a11y-toggle">
+<input type="checkbox" id="cbToggle" class="a11y-toggle">
+
+<div class="page">
+
+<nav class="navbar-payyo">
+  <div class="container nav-inner">
+    <a class="navbar-brand" href="#home">Banaue<span>.</span></a>
+
+    <input type="checkbox" id="navToggle" class="nav-check">
+    <label for="navToggle" class="nav-burger" aria-label="Toggle menu"><span></span><span></span><span></span></label>
+
+    <div class="nav-menu">
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#story">Story</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#map">Map</a></li>
+        <li><a href="#stay">Stay</a></li>
+      </ul>
+      <div class="nav-tools">
+        <div class="nav-social">
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+        <div class="a11y-controls">
+          <label for="themeToggle" class="a11y-btn theme-btn" aria-label="Toggle light and dark theme">
+            <i class="fa-solid fa-sun icon-sun"></i>
+            <i class="fa-solid fa-moon icon-moon"></i>
+          </label>
+          <label for="cbToggle" class="a11y-btn cb-btn" aria-label="Toggle color-blind friendly mode">
+            <i class="fa-solid fa-eye"></i>
+          </label>
+        </div>
+        <a href="#stay" class="btn-gold">Book Now</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<header id="home" class="hero">
+  <div class="container">
+    <div class="hero-glass">
+      <div class="row g-4">
+        <div class="col-lg-7">
+          <div class="hero-photo">
+            <video class="hero-video" autoplay muted loop playsinline poster="img/bg.jpg">
+              <source src="bgvid.mp4" type="video/mp4">
+            </video>
+            <div class="d-flex justify-content-between align-items-start hero-top-row">
+              <span class="eyebrow">Ifugao Province, Philippines</span>
+              <div class="weather-pill"><i class="fa-solid fa-cloud-sun"></i> 21°C · Misty mountain air</div>
+            </div>
+            <div>
+              <h1 class="hero-title">Banaue <em>Rice</em><br>Terraces</h1>
+              <p class="hero-desc">Carved into the Cordillera mountains some 2,000 years ago by the Ifugao, without machines — only bare hands, hardened wood, and knowledge passed down each generation. Come walk the steps of the "Stairway to the Sky."</p>
+              <div class="pin-row mt-3">
+                <div class="d-flex align-items-center gap-2">
+                  <i class="fa-solid fa-location-dot" style="color:var(--gold);"></i>
+                  <span>Batad Viewpoint, Banaue</span>
+                </div>
+                <div class="d-flex gap-2 align-items-center">
+                  <label class="icon-round like-btn" aria-label="Save this page">
+                    <input type="checkbox" id="likeToggle">
+                    <i class="fa-regular fa-heart heart-outline"></i>
+                    <i class="fa-solid fa-heart heart-solid"></i>
+                  </label>
+                  <a class="icon-round" href="#commentsModal" aria-label="Leave a comment"><i class="fa-regular fa-comment"></i></a>
+                  <details class="share-pop">
+                    <summary class="icon-round" aria-label="Share this page"><i class="fa-solid fa-paper-plane"></i></summary>
+                    <div class="share-pop-body">
+                      <p class="share-pop-title">Share this page</p>
+                      <div class="share-link-box">
+                        <input class="share-link-input" type="text" readonly value="https://banaue-terraces.example/#home" aria-label="Website link — select and copy">
+                      </div>
+                      <p class="share-hint">Tap the field, select all, then copy — works without any app.</p>
+                      <div class="share-row">
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=https://banaue-terraces.example/" target="_blank" rel="noopener" aria-label="Share on Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://twitter.com/intent/tweet?url=https://banaue-terraces.example/&amp;text=Banaue%20Rice%20Terraces" target="_blank" rel="noopener" aria-label="Share on X"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="https://wa.me/?text=https://banaue-terraces.example/" target="_blank" rel="noopener" aria-label="Share on WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="mailto:?subject=Banaue%20Rice%20Terraces&amp;body=https://banaue-terraces.example/" aria-label="Share via email"><i class="fa-solid fa-envelope"></i></a>
+                      </div>
+                    </div>
+                  </details>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5">
+          <div class="d-flex justify-content-between align-items-center mb-2">
+            <h3 style="font-size:1.2rem;color:var(--media-text);">Must-See Clusters</h3>
+            <a href="#gallery" class="eyebrow">View all <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+
+          <div class="must-see-item">
+            <img src="pic1.jpg" alt="Batad Amphitheater">
+            <div class="msi-body">
+              <h4>Batad Amphitheater</h4>
+              <p>UNESCO World Heritage Cluster</p>
+              <span class="tag"><i class="fa-solid fa-location-dot"></i> Batad</span>
+            </div>
+            <i class="fa-solid fa-arrow-right msi-arrow"></i>
+          </div>
+          <div class="must-see-item">
+            <img src="pic5.jpg" alt="Hapao Hot Springs">
+            <div class="msi-body">
+              <h4>Hapao Hot Springs</h4>
+              <p>Natural springs beside the terraces</p>
+              <span class="tag"><i class="fa-solid fa-location-dot"></i> Hungduan</span>
+            </div>
+            <i class="fa-solid fa-arrow-right msi-arrow"></i>
+          </div>
+          <div class="must-see-item">
+            <img src="pic2.jpg" alt="Bangaan Village">
+            <div class="msi-body">
+              <h4>Bangaan Village</h4>
+              <p>Traditional Ifugao hut settlement</p>
+              <span class="tag"><i class="fa-solid fa-location-dot"></i> Bangaan</span>
+            </div>
+            <i class="fa-solid fa-arrow-right msi-arrow"></i>
+          </div>
+          <div class="must-see-item">
+            <img src="pic7.jpg" alt="Banaue Market">
+            <div class="msi-body">
+              <h4>Banaue Viewpoint Market</h4>
+              <p>Local crafts and woven souvenirs</p>
+              <span class="tag"><i class="fa-solid fa-location-dot"></i> Poblacion</span>
+            </div>
+            <i class="fa-solid fa-arrow-right msi-arrow"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <input type="checkbox" id="alertDismiss" class="a11y-toggle">
+    <div class="alert-payyo mt-4" id="siteAlert">
+      <strong>2,000 years in the making, one storm from erosion.</strong> Terrace walls are hand-repaired every year — every homestay booked and every guided trek helps fund the upkeep that keeps this wonder standing.
+      <label for="alertDismiss" class="btn-close-custom" aria-label="Close">&times;</label>
+    </div>
+  </div>
+</header>
+
+<section id="story" class="section-pad">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6">
+        <span class="eyebrow">Why It Matters</span>
+        <h2 class="mt-2 mb-3" style="font-size:clamp(1.8rem,3.5vw,2.6rem);">Carved by hands,<br>not machines.</h2>
+        <p style="opacity:.85;">Long before modern engineering, the Ifugao people shaped entire mountainsides into farmland — stone and mud walls climbing over 1,500 meters, fed by an ancient forest irrigation system called the <em>muyong</em>. Every terrace still grows heirloom <em>Tinawon</em> rice, harvested once a year, exactly as it was centuries ago.</p>
+        <p style="opacity:.85;">The terraces are a UNESCO World Heritage Site — and one of the few living landscapes still farmed by the descendants of those who built it. But younger generations are leaving for the cities, and unmaintained walls collapse in the rainy season. What survives here survives because people keep choosing to return.</p>
+      </div>
+      <div class="col-lg-6">
+        <div class="story-panel">
+          <div class="row row-cols-2 g-4 story-stats">
+            <div class="col story-stat"><div class="num">2,000+</div><div class="lbl">Years of continuous farming</div></div>
+            <div class="col story-stat"><div class="num">4</div><div class="lbl">Inscribed terrace clusters</div></div>
+            <div class="col story-stat"><div class="num">1,500m</div><div class="lbl">Elevation at the highest walls</div></div>
+            <div class="col story-stat"><div class="num">1</div><div class="lbl">Rice harvest, once a year</div></div>
+          </div>
+          <div class="story-divider"></div>
+          <ul class="story-facts">
+            <li>
+              <i class="fa-solid fa-water"></i>
+              <div><strong>Muyong Forest System</strong><span>A ring of forest kept above each cluster stores rainwater and feeds the terraces year-round, entirely by gravity.</span></div>
+            </li>
+            <li>
+              <i class="fa-solid fa-seedling"></i>
+              <div><strong>Tinawon Rice</strong><span>A single heirloom variety, planted and harvested once a year, unchanged for generations of Ifugao farmers.</span></div>
+            </li>
+            <li>
+              <i class="fa-solid fa-hands"></i>
+              <div><strong>Hand-Built, Hand-Repaired</strong><span>No machinery — stone and mud walls are still shaped and mended by hand every planting season.</span></div>
+            </li>
+            <li>
+              <i class="fa-solid fa-landmark"></i>
+              <div><strong>UNESCO Since 1995</strong><span>Inscribed as one of the Philippine Cordilleras' living cultural landscapes, still farmed today.</span></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="gallery" class="section-pad" style="background:var(--surface);">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="eyebrow">The Terraces, Up Close</span>
+      <h2 class="mt-2" style="font-size:clamp(1.8rem,3.5vw,2.6rem);">Faces &amp; Flavors of Banaue</h2>
+      <p style="opacity:.7;max-width:36rem;margin:.5rem auto 0;">Seven views of a living landscape — click a photo to bring its story forward.</p>
+    </div>
+
+    <div class="ff-gallery">
+      <input type="radio" name="ffpic" id="ff1" class="ff-radio" checked>
+      <input type="radio" name="ffpic" id="ff2" class="ff-radio">
+      <input type="radio" name="ffpic" id="ff3" class="ff-radio">
+      <input type="radio" name="ffpic" id="ff4" class="ff-radio">
+      <input type="radio" name="ffpic" id="ff5" class="ff-radio">
+      <input type="radio" name="ffpic" id="ff6" class="ff-radio">
+      <input type="radio" name="ffpic" id="ff7" class="ff-radio">
+
+      <div class="ff-stage">
+        <div class="ff-bg ff-bg-1" style="background-image:url('pic1.jpg');"></div>
+        <div class="ff-bg ff-bg-2" style="background-image:url('pic2.jpg');"></div>
+        <div class="ff-bg ff-bg-3" style="background-image:url('pic3.jpg');"></div>
+        <div class="ff-bg ff-bg-4" style="background-image:url('pic4.jpg');"></div>
+        <div class="ff-bg ff-bg-5" style="background-image:url('pic5.jpg');"></div>
+        <div class="ff-bg ff-bg-6" style="background-image:url('pic6.jpg');"></div>
+        <div class="ff-bg ff-bg-7" style="background-image:url('pic7.jpg');"></div>
+
+        <div class="ff-info ff-info-1">
+          <span class="tag">Location</span>
+          <h3>Batad Amphitheater</h3>
+          <p>An unbroken bowl of terraces climbing the mountainside, reachable only on foot. Homestays sit right along the rim, so the view is the first thing you see each morning and the last thing you see each night.</p>
+          <ul class="ff-meta">
+            <li><i class="fa-solid fa-clock"></i> Best at sunrise</li>
+            <li><i class="fa-solid fa-person-hiking"></i> ~2 hr trek from Banaue proper</li>
+            <li><i class="fa-solid fa-star"></i> UNESCO core zone</li>
+          </ul>
+          <a href="#stay" class="ff-cta">Stay near Batad <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <div class="ff-info ff-info-2">
+          <span class="tag">Location</span>
+          <h3>Sunrise Over Bangaan</h3>
+          <p>A living village of traditional Ifugao huts, gathered like a nest at the foot of its own terrace cluster. Mist still pools in the valley at dawn, exactly the scene early travelers wrote home about.</p>
+          <ul class="ff-meta">
+            <li><i class="fa-solid fa-clock"></i> Dawn light, 5:30–6:30 AM</li>
+            <li><i class="fa-solid fa-car"></i> 15 min from town center</li>
+            <li><i class="fa-solid fa-house"></i> Village homestays available</li>
+          </ul>
+          <a href="#stay" class="ff-cta">Stay near Bangaan <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <div class="ff-info ff-info-3">
+          <span class="tag">Food</span>
+          <h3>Pinikpikan &amp; Tinawon Rice</h3>
+          <p>Every homestay meal is built around rice grown right outside the door. Pair it with pinikpikan, a smoked-chicken stew simmered with etag and mountain greens — cool-season comfort food at 1,500 meters.</p>
+          <ul class="ff-meta">
+            <li><i class="fa-solid fa-bowl-food"></i> Served at most homestays</li>
+            <li><i class="fa-solid fa-leaf"></i> Grown without machines</li>
+            <li><i class="fa-solid fa-calendar"></i> One harvest, once a year</li>
+          </ul>
+          <a href="#stay" class="ff-cta">Taste it yourself <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <div class="ff-info ff-info-4">
+          <span class="tag">Locals</span>
+          <h3>Ifugao Elder</h3>
+          <p>Sit with a host long enough and the terraces stop being scenery — they become family history. Many elders still recall which wall their grandfather rebuilt, and why, and when.</p>
+          <ul class="ff-meta">
+            <li><i class="fa-solid fa-comments"></i> Storytelling in the evening</li>
+            <li><i class="fa-solid fa-hands"></i> Weaving demonstrations</li>
+            <li><i class="fa-solid fa-language"></i> Ifugao &amp; Filipino spoken</li>
+          </ul>
+          <a href="#stay" class="ff-cta">Meet the hosts <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <div class="ff-info ff-info-5">
+          <span class="tag">Location</span>
+          <h3>Hapao Hot Springs</h3>
+          <p>Natural springs tucked beside the Hungduan cluster, crossed by a hanging footbridge. After a full day of trekking, this is where sore legs go to recover, terrace views included.</p>
+          <ul class="ff-meta">
+            <li><i class="fa-solid fa-water-ladder"></i> Open most of the day</li>
+            <li><i class="fa-solid fa-person-hiking"></i> Combine with a Hungduan trek</li>
+            <li><i class="fa-solid fa-mountain"></i> Cluster elevation ~1,000m</li>
+          </ul>
+          <a href="#stay" class="ff-cta">Stay near Hungduan <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <div class="ff-info ff-info-6">
+          <span class="tag">Locals</span>
+          <h3>Harvesting by Hand</h3>
+          <p>Once a year, entire families move through the terraces cutting Tinawon rice stalk by stalk. Time a visit to the harvest season and a guide can bring you right into the fields to help — or just watch.</p>
+          <ul class="ff-meta">
+            <li><i class="fa-solid fa-calendar-days"></i> Seasonal — ask your host</li>
+            <li><i class="fa-solid fa-people-group"></i> A whole-village event</li>
+            <li><i class="fa-solid fa-camera"></i> A favorite for photographers</li>
+          </ul>
+          <a href="#stay" class="ff-cta">Plan your trek <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <div class="ff-info ff-info-7">
+          <span class="tag">Culture</span>
+          <h3>Viewpoint Market</h3>
+          <p>Rows of woven baskets, beadwork, and carved wooden bulul figures, sold by the families who make them. Bargain gently, ask about the pattern, and you'll usually get the story behind it too.</p>
+          <ul class="ff-meta">
+            <li><i class="fa-solid fa-bag-shopping"></i> Open daily near the viewpoint</li>
+            <li><i class="fa-solid fa-hand-holding-heart"></i> Buys support local weavers</li>
+            <li><i class="fa-solid fa-money-bill-wave"></i> Cash preferred</li>
+          </ul>
+          <a href="#stay" class="ff-cta">Book your visit <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="ff-thumbs">
+        <label for="ff1" class="ff-thumb ff-thumb-1"><img src="pic1.jpg" alt="Batad Amphitheater, aerial view"><span class="ff-thumb-label">Batad</span></label>
+        <label for="ff2" class="ff-thumb ff-thumb-2"><img src="pic2.jpg" alt="Sunrise over Bangaan village"><span class="ff-thumb-label">Bangaan</span></label>
+        <label for="ff3" class="ff-thumb ff-thumb-3"><img src="pic3.jpg" alt="Pinikpikan and heirloom Tinawon rice"><span class="ff-thumb-label">Cuisine</span></label>
+        <label for="ff4" class="ff-thumb ff-thumb-4"><img src="pic4.jpg" alt="Ifugao elder in traditional weave"><span class="ff-thumb-label">Elders</span></label>
+        <label for="ff5" class="ff-thumb ff-thumb-5"><img src="pic5.jpg" alt="Hapao hot springs and hanging bridge"><span class="ff-thumb-label">Hapao</span></label>
+        <label for="ff6" class="ff-thumb ff-thumb-6"><img src="pic6.jpg" alt="Hands harvesting Tinawon rice"><span class="ff-thumb-label">Harvest</span></label>
+        <label for="ff7" class="ff-thumb ff-thumb-7"><img src="pic7.jpg" alt="Banaue viewpoint market and crafts"><span class="ff-thumb-label">Market</span></label>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="map" class="section-pad map-section">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-5">
+        <span class="eyebrow">Find Your Way</span>
+        <h2 class="mt-2 mb-3" style="font-size:clamp(1.8rem,3.5vw,2.6rem);">Walk the contours.</h2>
+        <p style="opacity:.85;">Banaue sits at the heart of four inscribed clusters — Batad, Bangaan, Hungduan, and Mayoyao — linked by ridge trails and single-lane mountain roads. Trek between clusters over one to three days, staying in Ifugao-run homestays along the way.</p>
+        <p style="opacity:.85;">Hover or tap the cube — each face traces a different route through the terraces.</p>
+      </div>
+      <div class="col-lg-7">
+        <div class="cube-scene" id="cubeScene" tabindex="0">
+          <div class="cube" id="cube">
+            <div class="face face-front"></div>
+            <div class="face face-back"></div>
+            <div class="face face-right"></div>
+            <div class="face face-left"></div>
+            <div class="face face-top"></div>
+            <div class="face face-bottom"></div>
+          </div>
+        </div>
+        <p class="map-caption">Hover (or tap, then hold) to trace the route</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-pad testi-section">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="eyebrow">In Their Words</span>
+      <h2 class="mt-2" style="font-size:clamp(1.8rem,3.5vw,2.6rem);">Travelers &amp; Terrace Keepers</h2>
+      <p style="opacity:.7;max-width:36rem;margin:.5rem auto 0;">Five voices from the trail — visitors and the Ifugao families who host them.</p>
+    </div>
+
+    <div class="testi-carousel">
+      <input type="radio" name="testi" id="t1" class="testi-radio" checked>
+      <input type="radio" name="testi" id="t2" class="testi-radio">
+      <input type="radio" name="testi" id="t3" class="testi-radio">
+      <input type="radio" name="testi" id="t4" class="testi-radio">
+      <input type="radio" name="testi" id="t5" class="testi-radio">
+
+      <div class="testi-track">
+        <figure class="testi-slide testi-slide-1">
+          <div>
+            <i class="fa-solid fa-quote-left testi-quote-icon"></i>
+            <blockquote>"We climbed for two hours before Batad even came into view — and then it just opens up beneath you. Nothing prepares you for the scale of it."</blockquote>
+            <div class="testi-foot">
+              <span class="testi-avatar">R</span>
+              <figcaption class="testi-figcaption">Traveler, Batad Trek<span class="stars">★★★★★</span></figcaption>
+            </div>
+          </div>
+        </figure>
+        <figure class="testi-slide testi-slide-2">
+          <div>
+            <i class="fa-solid fa-quote-left testi-quote-icon"></i>
+            <blockquote>"My grandfather built these walls, and his grandfather before him. When guests stay with us, they're not just visiting — they're helping us keep farming this land."</blockquote>
+            <div class="testi-foot">
+              <span class="testi-avatar">L</span>
+              <figcaption class="testi-figcaption">Ifugao Homestay Host, Bangaan<span class="stars">★★★★★</span></figcaption>
+            </div>
+          </div>
+        </figure>
+        <figure class="testi-slide testi-slide-3">
+          <div>
+            <i class="fa-solid fa-quote-left testi-quote-icon"></i>
+            <blockquote>"The Tinawon rice takes a full year to grow. It's slower, it's harder — but it's ours, and it tastes like nowhere else."</blockquote>
+            <div class="testi-foot">
+              <span class="testi-avatar">M</span>
+              <figcaption class="testi-figcaption">Local Farmer, Hungduan<span class="stars">★★★★★</span></figcaption>
+            </div>
+          </div>
+        </figure>
+        <figure class="testi-slide testi-slide-4">
+          <div>
+            <i class="fa-solid fa-quote-left testi-quote-icon"></i>
+            <blockquote>"I've guided the same trail three hundred times and it still stops me for a second at the rim. That reaction from a first-timer — that's the whole job."</blockquote>
+            <div class="testi-foot">
+              <span class="testi-avatar">J</span>
+              <figcaption class="testi-figcaption">Trekking Guide, Batad<span class="stars">★★★★★</span></figcaption>
+            </div>
+          </div>
+        </figure>
+        <figure class="testi-slide testi-slide-5">
+          <div>
+            <i class="fa-solid fa-quote-left testi-quote-icon"></i>
+            <blockquote>"I expected photos. I didn't expect to be invited in for rice and stories about the wall outside the window. That's the part I still tell people about."</blockquote>
+            <div class="testi-foot">
+              <span class="testi-avatar">A</span>
+              <figcaption class="testi-figcaption">First-Time Traveler, Manila<span class="stars">★★★★★</span></figcaption>
+            </div>
+          </div>
+        </figure>
+      </div>
+
+      <div class="testi-tabs">
+        <label for="t1" class="testi-tab testi-tab-1"><span class="testi-avatar">R</span><span>Traveler</span></label>
+        <label for="t2" class="testi-tab testi-tab-2"><span class="testi-avatar">L</span><span>Host</span></label>
+        <label for="t3" class="testi-tab testi-tab-3"><span class="testi-avatar">M</span><span>Farmer</span></label>
+        <label for="t4" class="testi-tab testi-tab-4"><span class="testi-avatar">J</span><span>Guide</span></label>
+        <label for="t5" class="testi-tab testi-tab-5"><span class="testi-avatar">A</span><span>Traveler</span></label>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="stay" class="section-pad stay-section">
+  <div class="container">
+    <span class="eyebrow">Stay Among the Clouds</span>
+    <h2 class="mt-2 mb-3">Wake up above the terraces.</h2>
+    <p class="mx-auto" style="max-width:38rem;opacity:.85;">Choose a homestay run by the families who still farm these fields. Every night booked funds terrace-wall repair, keeps young Ifugao guides employed, and keeps the "Stairway to the Sky" standing for the next 2,000 years.</p>
+    <a href="#bookModal" class="btn-gold mt-3">Book Your Staycation</a>
+  </div>
+</section>
+
+<div class="site-modal" id="bookModal">
+  <div class="modal-card">
+    <a href="#" class="modal-close" aria-label="Close">&times;</a>
+    <h5>Book Your Banaue Staycation</h5>
+    <form action="mailto:stay@banaue-terraces.example?subject=Homestay%20Booking%20Request" method="post" enctype="text/plain">
+      <div class="field">
+        <label class="form-label">Full Name</label>
+        <input type="text" class="form-control" name="Full Name" required>
+      </div>
+      <div class="field">
+        <label class="form-label">Email</label>
+        <input type="email" class="form-control" name="Email" required>
+      </div>
+      <div class="form-row">
+        <div class="field">
+          <label class="form-label">Check-in</label>
+          <input type="date" class="form-control" name="Check-in" required>
+        </div>
+        <div class="field">
+          <label class="form-label">Check-out</label>
+          <input type="date" class="form-control" name="Check-out" required>
+        </div>
+      </div>
+      <div class="field">
+        <label class="form-label">Homestay Cluster</label>
+        <select class="form-select" name="Cluster">
+          <option>Batad</option>
+          <option>Bangaan</option>
+          <option>Hungduan</option>
+          <option>Mayoyao</option>
+        </select>
+      </div>
+      <button type="submit" class="btn-gold w-100" style="border:1px solid var(--gold);">Confirm Request</button>
+      <p class="comment-note mt-2 mb-0">Opens your email app with this request pre-filled — an Ifugao host will confirm with you shortly.</p>
+    </form>
+  </div>
+</div>
+
+<div class="site-modal" id="commentsModal">
+  <div class="modal-card">
+    <a href="#" class="modal-close" aria-label="Close">&times;</a>
+    <h5>Traveler Comments — Batad Viewpoint</h5>
+    <div class="comments-list">
+      <div class="comment-item">
+        <div class="comment-head"><span class="comment-name">Dani R.</span><span class="comment-date">Mar 14, 2026</span></div>
+        <p class="comment-text">Stayed two nights right on the rim — worth every step of the trek down.</p>
+      </div>
+      <div class="comment-item">
+        <div class="comment-head"><span class="comment-name">Kevin O.</span><span class="comment-date">Jan 2, 2026</span></div>
+        <p class="comment-text">Our host taught us to cook pinikpikan. Ask if you can help in the kitchen!</p>
+      </div>
+    </div>
+    <form action="mailto:hello@banaue-terraces.example?subject=New%20Comment" method="post" enctype="text/plain">
+      <div class="field">
+        <label class="form-label">Your Name</label>
+        <input type="text" class="form-control" name="Name" required>
+      </div>
+      <div class="field">
+        <label class="form-label">Comment</label>
+        <textarea class="form-control" name="Comment" rows="3" required placeholder="Share a tip, a memory, or a question..."></textarea>
+      </div>
+      <button type="submit" class="btn-gold w-100" style="border:1px solid var(--gold);">Post Comment</button>
+      <p class="comment-note mt-2 mb-0">Opens your email app — we review and add comments here by hand.</p>
+    </form>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-4">
+        <h3 style="font-size:1.4rem;">Banaue<span style="color:var(--gold);">.</span></h3>
+        <p style="opacity:.7;font-size:.9rem;">A guide to the Banaue Rice Terraces — built to help travelers discover, and help the Ifugao preserve, a 2,000-year-old living wonder.</p>
+        <div class="nav-social mt-3">
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="col-lg-2 col-6">
+        <h5>Explore</h5>
+        <a class="footer-link" href="#home">Home</a>
+        <a class="footer-link" href="#story">Story</a>
+        <a class="footer-link" href="#gallery">Gallery</a>
+        <a class="footer-link" href="#map">Map</a>
+      </div>
+      <div class="col-lg-2 col-6">
+        <h5>Visit</h5>
+        <a class="footer-link" href="#stay">Book a Stay</a>
+        <a class="footer-link" href="#">Trek Guides</a>
+        <a class="footer-link" href="#">Getting There</a>
+      </div>
+      <div class="col-lg-4">
+        <h5>Project Group</h5>
+        <p style="opacity:.7;font-size:.9rem;margin-bottom:.3rem;">Bootstrap Web Design Project — Tourist Destination</p>
+        <p style="opacity:.7;font-size:.85rem;">Group Members: <em>Cerbolles · Cunanan · David · Dela Cruz · De Vera · Duhaylungsod · Fernandez · Lopez</em></p>
+        <p style="opacity:.5;font-size:.8rem;">Replace with your section &amp; group names.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 Banaue Rice Terraces. Made for the Ifugao and everyone who dreams of the Stairway to the Sky.</div>
+  </div>
+</footer>
+
+</div>
+
+</body>
+</html>
